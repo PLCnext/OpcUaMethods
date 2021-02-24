@@ -36,7 +36,7 @@ The procedure uses a custom OPC UA "Information Model", which in this case is ge
 
 In this example, we will create an OPC UA method that retrieves a single item of Parameter, Diagnostics and Information (PDI) data from an Axioline I/O module connected to the PLC.
 
-The PDI data available for a specific I/O module is described in the data sheet for that I/O module. Data sheets can be downloaded from the Phoenix Contact website.
+The PDI data available for each type of Axioline I/O module is described in the data sheet for that I/O module. Data sheets can be downloaded from the Phoenix Contact website.
 
 The "address" of each item of PDI data can be uniquely identified using four integers:
 
@@ -45,9 +45,9 @@ The "address" of each item of PDI data can be uniquely identified using four int
 - Index - the location of the PDI data item in the I/O module.
 - Subindex (only applies when the Index refers to a PDI "record") - the location of a single data item in a PDI record.
 
-Each item of PDI data has a specific data type (e.g. string or integer), however for simplicity our method will only return a string.
+Each item of PDI data has a specific data type (e.g. string or integer), however for simplicity our method only returns a string.
 
-The example has limited error checking, for example on input parameter values. This would be required for production applications, but is omitted here for simplicity.
+This example has limited error checking, e.g. on input parameter values. Thorough error checking would be required for production applications, but it is omitted here for simplicity.
 
 ## Procedure
 
@@ -63,17 +63,18 @@ The example has limited error checking, for example on input parameter values. T
 
    ![New Project 4](img/new-project4.png)
 
-1. In the Information Model pane, create a new Object Type.
+1. In the Information Model pane, create a new Object Type by right-clicking on the BaseObjectType.
 
    ![New Type](img/new-type.png)
 
 1. Fill in the details of the new type.
 
    - Give the type a name.
-   - Add the method that we will use to read PDI data, with the required input and output arguments. The data types of the method arguments should be as shown below.
-   - When finished, press the OK button.
+   - Add the method that we will use to read PDI data, with the required input and output arguments. The names and data types of the method arguments should be as shown below.
 
    ![Type Details](img/type-details.png)
+
+   - When finished, press the OK button.
 
 1. Save the model.
 
@@ -237,7 +238,7 @@ So far, the OPC UA information model only contains a type definition, which corr
 
    ![Export XML](img/export-xml.png)
 
-1. Copy the exported XML file to the following directory on the PLC:
+1. [Copy](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/#for_copying_or_) the exported XML file to the following directory on the PLC:
 
     ```text
     /opt/plcnext/projects/Default/Services/OpcUA/NodeSets/
@@ -266,7 +267,64 @@ So far, the OPC UA information model only contains a type definition, which corr
 
    ![Method Call 2](img/method-call2.png)
 
+### Bonus exercise
+
+In some cases you may want to allow users to select an input argument value from a fixed list. For example, in this case we can force the user to select the Index value from a list of known valid options.
+
+Procedure:
+
+1. In UaModeler, create a new Enumerated DataType.
+
+   ![Add Enum](img/add-enum.png)
+
+1. Fill in the details of the new type.
+
+   - Give the type a name.
+   - Add the values that the user can select, including a string that indicates what each value means.
+
+   ![Enum Details](img/enum-details.png)
+
+   - When finished, press the OK button.
+
+1. Change the type of the Index argument to the Enumerated data type.
+
+   ![Enum Argument](img/enum-arg.png)
+
+   - When finished, press the OK button.
+
+1. Save the model.
+
+1. Export the XML file.
+
+1. Copy the XML file to the PLC.
+
+1. In PLCnext Engineer, change the type of the Index input.
+
+   Enumerated data types are always of type Int32, so the type of the Index input on the function block must be changed to DINT.
+
+   ![Enum FB Variable](img/enum-fb-var.png)
+
+1. Write and start the PLCnext Engineer project.
+
+1. In UaExpert, call the method.
+
+   ![Enum Success](img/enum-success.png)
+
+   Now, the Index value must be selected from a fixed list of options.
+
 ## Next steps
 
-Rather than building your own information model from scratch, it is worth considering a standard information model for your specific industry or application type. The PLCnext Info Center gives an example of how to use the standard [PA-DIM information model](https://www.fieldcommgroup.org/sites/default/files/technologies/PA%20DIM%20white%20paper%201.0.pdf) in UaModeler to link to a PLCnext Engineer project.
+Rather than building your own information model from scratch, it is worth considering a standard information model for your specific industry or application type. The PLCnext Info Center gives [an example](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPC_UA_integrate_external_information_models.htm) of how to use the standard [PA-DIM information model](https://www.fieldcommgroup.org/sites/default/files/technologies/PA%20DIM%20white%20paper%201.0.pdf) in UaModeler with a PLCnext Engineer project.
 
+## Problems?
+
+- [Check the Output.log file]() on the PLC for messages from the OPC UA server.
+- Ask for help in the [PLCnext Community Forum](https://www.plcnext-community.net/en/discussions-2-offcanvas/forums.html).
+
+If you find a mistake in this procedure, or if you would like to suggest improvements or new features, please [open an issue](https://github.com/PLCnext/OpcUaMethods/issues).
+
+## License
+
+Copyright (c) Phoenix Contact GmbH & Co KG. All rights reserved.
+
+Licensed under the [MIT](/LICENSE) License.
