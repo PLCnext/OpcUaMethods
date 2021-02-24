@@ -227,7 +227,7 @@ So far, the OPC UA information model only contains a type definition, which corr
 
    ![Extension](img/extension.png)
 
-   - The format of the extension is<br/>`<MethodTarget xmlns="http://phoenixcontact.com/OpcUA/2019/NodeSetExtensions.xsd" 
+   - The format of the extension is:<br/>`<MethodTarget xmlns="http://phoenixcontact.com/OpcUA/2019/NodeSetExtensions.xsd" 
                    FunctionBlock="COMPONENT/PROGRAM.FUNCTION"/>`
    - The name of the function block instance must be fully qualified with the component name and the program instance name.
    - When finished, press the OK button.
@@ -240,7 +240,7 @@ So far, the OPC UA information model only contains a type definition, which corr
 
    ![Export XML](img/export-xml.png)
 
-1. [Copy](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/#for_copying_or_) the exported XML file to the following directory on the PLC:
+1. [Copy](https://www.plcnext.help/te/Operating_System/Connecting_to_the_controller.htm#for_copying_or_) the exported XML file to the following directory on the PLC:
 
     ```text
     /opt/plcnext/projects/Default/Services/OpcUA/NodeSets/
