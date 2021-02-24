@@ -57,11 +57,11 @@ The example has limited error checking, for example on input parameter values. T
 
    ![New Project 1](img/new-project1.png)
 
-   ![New Project 2](img/new-project1.png)
+   ![New Project 2](img/new-project2.png)
 
-   ![New Project 3](img/new-project1.png)
+   ![New Project 3](img/new-project3.png)
 
-   ![New Project 4](img/new-project1.png)
+   ![New Project 4](img/new-project4.png)
 
 1. In the Information Model pane, create a new Object Type.
 
