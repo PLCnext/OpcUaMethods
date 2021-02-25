@@ -320,7 +320,7 @@ Rather than building your own information model from scratch, it is worth consid
 
 ## Problems?
 
-- [Check the Output.log file]() on the PLC for messages from the OPC UA server.
+- [Check the Output.log file](https://pxc1.esc-eu-central-1.empolisservices.com/gatekeeper/guesttoken/45?app=/service-express/portal/cb?redirect=https://pxc1.esc-eu-central-1.empolisservices.com/service-express/portal/object/esc/iu-45-85e4a3ef-5699-4c4f-b7b9-4a04246e53d3) on the PLC for messages from the OPC UA server.
 - Ask for help in the [PLCnext Community Forum](https://www.plcnext-community.net/en/discussions-2-offcanvas/forums.html).
 
 If you find a mistake in this procedure, or if you would like to suggest improvements or new features, please [open an issue](https://github.com/PLCnext/OpcUaMethods/issues).
