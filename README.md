@@ -215,7 +215,9 @@ So far, the OPC UA information model only contains a type definition, which corr
 
    ![New Object 1](img/new-object1.png)
 
-1. With the new object selected, view the user-defined extensions for that object.
+1. Select the method in the new object.
+
+1. With the method in the new object selected, view the user-defined extensions for that method.
 
    ![Extensions Button](img/extensions-button.png)
 
@@ -223,7 +225,7 @@ So far, the OPC UA information model only contains a type definition, which corr
 
    ![UA Settings](img/ua-settings.png)
 
-1. Add an extension that links the object to the PLCnext Engineer function block instance.
+1. Add an extension that links the method to the PLCnext Engineer function block instance.
 
    ![Extension](img/extension.png)
 
