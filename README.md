@@ -220,6 +220,8 @@ So far, the OPC UA information model only contains a type definition, which corr
 
 1. Select the method in the new object.
 
+   ![Instance Method](img/instance-method.png)
+
 1. With the method in the new object selected, view the user-defined extensions for that method.
 
    ![Extensions Button](img/extensions-button.png)
