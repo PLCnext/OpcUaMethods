@@ -187,6 +187,8 @@ We now need to create a PLCnext Engineer function block that corresponds to the 
 
 1. In PLCnext Engineer, create an instance of the function block in the Main program.
 
+   Do not connect any variables to the inputs or outputs.
+
    In this example, the name of the FB instance is UA_PDI_READ1.
 
    ![FB Instance](img/fb-instance.png)
@@ -211,9 +213,10 @@ So far, the OPC UA information model only contains a type definition, which corr
 
    - Give the object a name.
    - Specify the type of the new object - this must be the type that we created earlier.
-   - When finished, press the OK button.
 
    ![New Object 1](img/new-object1.png)
+
+   - When finished, press the OK button.
 
 1. Select the method in the new object.
 
