@@ -235,7 +235,7 @@ So far, the OPC UA information model only contains a type definition, which corr
    ![Extension](img/extension.png)
 
    - The format of the extension is:<br/>`<MethodTarget xmlns="http://phoenixcontact.com/OpcUA/2019/NodeSetExtensions.xsd" 
-                   FunctionBlock="COMPONENT/PROGRAM.FUNCTION"/>`
+                   FunctionBlock="COMPONENT/PROGRAM.FUNCTION_BLOCK"/>`
    - The name of the function block instance must be fully qualified with the component name and the program instance name.
    - When finished, press the OK button.
 
