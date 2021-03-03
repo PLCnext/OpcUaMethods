@@ -86,6 +86,10 @@ We now need to create a PLCnext Engineer function block that corresponds to the 
 
 1. Change the [OPC UA server settings](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPC_UA_server_configuration.htm) so that "Visibility of variables" is set to either "Marked" or "All".
 
+1. Add your Axioline I/O module(s) to the "Axioline F" node in the Project tree.
+
+1. In the Axioline F "Device List" tab, note the Slot number that has been assigned to each Axioline I/O module.
+
 1. In a Data Types worksheet, create two new data types.
 
     ```delphi
