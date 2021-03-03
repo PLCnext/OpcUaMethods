@@ -88,7 +88,7 @@ We now need to create a PLCnext Engineer function block that corresponds to the 
 
 1. Add your Axioline I/O module(s) to the "Axioline F" node in the Project tree.
 
-1. In the Axioline F "Device List" tab, note the Slot number that has been assigned to each Axioline I/O module.
+1. In the Axioline F "Device List" tab, note the Slot number (#) that has been assigned to each Axioline I/O module.
 
 1. In a Data Types worksheet, create two new data types.
 
