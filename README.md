@@ -169,7 +169,7 @@ We now need to create a PLCnext Engineer function block that corresponds to the 
         REQ := (UA_MethodState >= 10),
         SLOT := Slot,
         SUBSLOT := Subslot,
-        INDEX := TO_WORD(Index),
+        INDEX := Index,
         SUBINDEX := Subindex,
         RD_1 := PdiData,
         STATUS := PdiStatus
@@ -312,6 +312,8 @@ Procedure:
    Enumerated data types are always of type Int32, so the type of the Index input on the function block must be changed to DINT.
 
    ![Enum FB Variable](img/enum-fb-var.png)
+
+1. In the call to the `PDI_READER` function block instance, convert the `Index` value to type WORD, using the `TO_WORD` function.
 
 1. Write and start the PLCnext Engineer project.
 
