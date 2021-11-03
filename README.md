@@ -22,7 +22,7 @@ The procedure uses a custom OPC UA "Information Model", which in this case is ge
 ## Background reading
 
 - [Unified Architecture](https://opcfoundation.org/about/opc-technologies/opc-ua/)
-- [OPC UA information model](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPC_UA_information_models.htm)
+- [OPC UA information model](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPCUA_information_models.htm)
 - [UA Modelling Best Practices](https://opcfoundation.org/wp-content/uploads/2020/09/OPC-11030-Whitepaper-UA-Modeling-Best-Practices-1.00.00.pdf)
 
 ## Prerequisites for this example
@@ -84,7 +84,7 @@ We now need to create a PLCnext Engineer function block that corresponds to the 
 
 1. In PLCnext Engineer, create a new project based on the template for your PLC and firmware version.
 
-1. Change the [OPC UA server settings](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPC_UA_server_configuration.htm) so that "Visibility of variables" is set to either "Marked" or "All".
+1. Change the [OPC UA server settings](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPCUA_server_configuration.htm) so that "Visibility of variables" is set to either "Marked" or "All".
 
 1. Add your Axioline I/O module(s) to the "Axioline F" node in the Project tree.
 
@@ -329,7 +329,7 @@ Procedure:
 
 ## Next steps
 
-Rather than building your own information model from scratch, it is worth considering a standard information model for your specific industry or application type. The PLCnext Info Center gives [an example](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPC_UA_integrate_external_information_models.htm) of how to use the standard [PA-DIM information model](https://www.fieldcommgroup.org/sites/default/files/technologies/PA%20DIM%20white%20paper%201.0.pdf) in UaModeler with a PLCnext Engineer project.
+Rather than building your own information model from scratch, it is worth considering a standard information model for your specific industry or application type. The PLCnext Info Center gives [an example](https://www.plcnext.help/te/Service_Components/OPC_UA_Server/OPCUA_integrate_external_information_models.htm) of how to use the standard [PA-DIM information model](https://www.fieldcommgroup.org/sites/default/files/technologies/PA%20DIM%20white%20paper%201.0.pdf) in UaModeler with a PLCnext Engineer project.
 
 ## Problems?
 
